@@ -188,7 +188,7 @@ header {
 	position: absolute;
 	top: -5px;
 	left: -5px;
-	z-index: 5000;
+	z-index: 500;
 	width: 180px;
 	height: 308px;
 	max-height: 308px;
@@ -215,6 +215,8 @@ header {
 	height: 40px;
 	margin: 0;
 	padding: 0;
+	z-index: 700;
+	position: relative;
 }
 .ingredient-icon img {
 	display: block;
@@ -421,7 +423,7 @@ header {
 }
 .food-card-overlay .ingredient-icon .food-icon-frame {
 	/* override from normal card css */
-	position: static;
+	position: sticky;
 	width: 64px;
 	height: 65px;
 }

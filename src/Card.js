@@ -28,10 +28,10 @@ class Card extends React.Component {
 			for (const [key, value] of recipes.entries()) {
 				items.push(
 					<div key={key}>
-						<Ingredient className="ingredient-icon" name={value[0]}/>
-						<Ingredient className="ingredient-icon" name={value[1]}/>
-						<Ingredient className="ingredient-icon" name={value[2]}/>
-						<Ingredient className="ingredient-icon" name={value[3]}/>
+						<Ingredient className="ingredient-icon" name={value[0]} id={this.props.foodID} onClick={this.props.cardClicked}/>
+						<Ingredient className="ingredient-icon" name={value[1]} id={this.props.foodID} onClick={this.props.cardClicked}/>
+						<Ingredient className="ingredient-icon" name={value[2]} id={this.props.foodID} onClick={this.props.cardClicked}/>
+						<Ingredient className="ingredient-icon" name={value[3]} id={this.props.foodID} onClick={this.props.cardClicked}/>
 					</div>
 				)
 			}
