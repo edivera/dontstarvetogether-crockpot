@@ -7,11 +7,7 @@ import iconRot from './images/icons/rot.png'
 import iconDonot from './images/icons/donot.png'
 
 import imgFrame from './images/ingredients/frame.png'
-
-const frameStyle = {
-	backgroundSize: "cover",
-	backgroundImage: `url(${imgFrame})`
-}
+import Ingredient from "./Ingredient";
 
 class Card extends React.Component {
 
@@ -32,18 +28,10 @@ class Card extends React.Component {
 			for (const [key, value] of recipes.entries()) {
 				items.push(
 					<div key={key}>
-						<div className="ingredient-icon" style={frameStyle}>
-							<img src={require(`./images/ingredients/${value[0]}.png`)} alt={value[0]} />
-						</div>
-						<div className="ingredient-icon" style={frameStyle}>
-							<img src={require(`./images/ingredients/${value[1]}.png`)} alt={value[1]} />
-						</div>
-						<div className="ingredient-icon" style={frameStyle}>
-							<img src={require(`./images/ingredients/${value[2]}.png`)} alt={value[2]} />
-						</div>
-						<div className="ingredient-icon" style={frameStyle}>
-							<img src={require(`./images/ingredients/${value[3]}.png`)} alt={value[3]} />
-						</div>
+						<Ingredient className="ingredient-icon" name={value[0]}/>
+						<Ingredient className="ingredient-icon" name={value[1]}/>
+						<Ingredient className="ingredient-icon" name={value[2]}/>
+						<Ingredient className="ingredient-icon" name={value[3]}/>
 					</div>
 				)
 			}

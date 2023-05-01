@@ -9,11 +9,7 @@ import iconRot from './images/icons/rot.png'
 import iconDonot from './images/icons/donot.png'
 
 import imgFrame from './images/ingredients/frame.png'
-
-const frameStyle = {
-	backgroundSize: "cover",
-	backgroundImage: `url(${imgFrame})`
-}
+import Ingredient from "./Ingredient";
 
 class Overlay extends React.Component {
 	
@@ -34,18 +30,10 @@ class Overlay extends React.Component {
 			for (const [key, value] of recipes.entries()) {
 				items.push(
 					<div className="row ingredient-container" key={key}>
-						<div className="col-3 ingredient-icon" style={frameStyle}>
-							<img src={require(`./images/ingredients/${value[0]}.png`)} alt={value[0]} />
-						</div>
-						<div className="col-3 ingredient-icon" style={frameStyle}>
-							<img src={require(`./images/ingredients/${value[1]}.png`)} alt={value[1]} />
-						</div>
-						<div className="col-3 ingredient-icon" style={frameStyle}>
-							<img src={require(`./images/ingredients/${value[2]}.png`)} alt={value[2]} />
-						</div>
-						<div className="col-3 ingredient-icon" style={frameStyle}>
-							<img src={require(`./images/ingredients/${value[3]}.png`)} alt={value[3]} />
-						</div>
+						<Ingredient className="col-3 ingredient-icon" name={value[0]}/>
+						<Ingredient className="col-3 ingredient-icon" name={value[1]}/>
+						<Ingredient className="col-3 ingredient-icon" name={value[2]}/>
+						<Ingredient className="col-3 ingredient-icon" name={value[3]}/>
 					</div>
 				)
 			}
