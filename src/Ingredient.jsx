@@ -16,8 +16,9 @@ export function Ingredient(props) {
     return (
         <div className={props.className} style={frameStyle}
              onMouseEnter={() => setHovered(true)}
-             onMouseLeave={() => setHovered(false)}>
-            <img src={require(`./images/ingredients/${props.name}.png`)} alt={props.name} />
+             onMouseLeave={() => setHovered(false)}
+             >
+            <img src={require(`./images/ingredients/${props.name}.png`)} alt={props.name} id={props.id} onClick={props.onClick}/>
         </div>
     )
 }
