@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import imgFrame from "./images/ingredients/frame.png";
+import IngredientTooltip from "./IngredientTooltip"
 
 const frameStyle = {
     backgroundSize: "cover",
@@ -19,6 +20,7 @@ export function Ingredient(props) {
              onMouseLeave={() => setHovered(false)}
              >
             <img src={require(`./images/ingredients/${props.name}.png`)} alt={props.name} id={props.id} onClick={props.onClick}/>
+            <IngredientTooltip name={props.name} hovered={hovered}/>
         </div>
     )
 }
