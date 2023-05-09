@@ -9,13 +9,12 @@ function IngredientTooltip(props) {
     }, [props.hovered])
 
     return (
-        <MouseTooltip
+        <MouseTooltip className={props.className}
             visible={isVisible}
             offsetX={15}
             offsetY={10}
         >
-            //todo: stylize
-            <span>{props.name}</span>
+            <span className="food-name">{props.name}</span>
         </MouseTooltip>
     )
 }
